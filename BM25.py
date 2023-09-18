@@ -85,21 +85,15 @@ def get_users_list():
         while cursor.alive:
             for user in cursor:
                 pbar.update(1)
-                new_user = Users(user["user_id"],user['news'])
+                new_user = Users(user["user_id"], user['news'])
                 users_list.append(new_user)  
  
     return users_list
 
 
 def lemmatize(liste_text):
-    liste_text=list(map(lambda x: re.sub(',','',x),liste_text))
-    liste_text=list(map(lambda x: re.sub(';','',x),liste_text))
-    liste_text=list(map(lambda x: re.sub('\.','',x),liste_text))
-    liste_text=list(map(lambda x: re.sub('\\n','',x),liste_text))
-    liste_text=list(map(lambda x: re.sub('\?','',x),liste_text))
-    liste_text=list(map(lambda x: re.sub('\!','',x),liste_text))
-    return list(map(lambda x: x.split(" "),liste_text))
-
+    liste_text=list(map(lambda x: re.sub('[,;\.\\n\?\!\:]','', x), liste_text))
+    return list(map(lambda x: x.split(" "), liste_text))
 
 
 
