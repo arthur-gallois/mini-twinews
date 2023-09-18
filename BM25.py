@@ -60,7 +60,7 @@ class Users():
         self.news_url = [news for i,news in enumerate(self.news_url) if self.news_text[i] is not None]
         self.news_text = [text for text in self.news_text if text is not None]
  
-    def get_test_batch(self,n_batch = 100,read_ratio = 0.1):
+    def get_test_batch(self,n_batch = 100):
         n_read = min(int(n_batch * 0.1),len(self.test_list))
         n_unread = n_batch - n_read
 
