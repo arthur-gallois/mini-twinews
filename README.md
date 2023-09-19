@@ -30,5 +30,6 @@ Les objets users sont des objets contenant les propriétés suivantes:
     train_list: Une partie de news_url destinée à l'entrainement (aussi appelé historique dans l'article)
     test_list: Une partie de news_url destinée à l'évaluation
 
-
-
+## Piste d'amélioration
+Une piste d’amélioration des modèles (notamment BM25) repose sur la lemmatisation. En effet, la lemmatisation utilisée dans notre modèle peut être améliorée en utilisant la bibliothèque stanza (ou spicy).
+Le problème de cette bibliothèque est sa complexité qui entraîne des temps de calculs trop élevés. Une méthode serait de lemmatiser les textes une fois et de stocker le résultat dans la bdd.
