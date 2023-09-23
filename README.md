@@ -11,7 +11,8 @@ Pour installer toutes les bibliothèques nécessaires au lancement de ce projet,
 
     pip install -r requirements.txt
 
-Pour utiliser la base de données, les dossiers news et users doivent être placés à la racine du projet
+Pour utiliser la base de données, les dossiers news et users doivent être placés à la racine du projet.
+
 Pour utiliser le modèle dbert-ft, le dossier contenant le fichier config.json du model doit être placé à la racine du projet et nommé "model_dbertft"
 
 ## Importation de la base de donnée
