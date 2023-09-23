@@ -5,6 +5,15 @@ Ce projet ne contient pas de dataset, pour obtenir un dataset, utilisez cet outi
 
 Ce projet possède le code necessaire pour classer des articles d'un base de donnée à partir de l'historique d'un utilisateur grâce aux algorithmes bm25 et d-bert-ft.
 
+## Installation
+
+Pour installer toutes les bibliothèques nécessaires au lancement de ce projet, créez un environment python et lancez à la racine du projet
+
+    pip install -r requirements.txt
+
+Pour utiliser la base de données, les dossiers news et users doivent être placés à la racine du projet
+Pour utiliser le modèle dbert-ft, le dossier contenant le fichier config.json du model doit être placé à la racine du projet et nommé "model_dbertft"
+
 ## Importation de la base de donnée
 
 Les fichiers de la base de données users et news doivent être placés à la racine du projet. Mongodb doit être installé et lancé sur l'ordinateur en local.
