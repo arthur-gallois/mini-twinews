@@ -1,7 +1,6 @@
-from pymongo import MongoClient  # Importer la bibliothèque MongoDB pour la connexion à la base de données
-from tqdm import tqdm  # Importer la bibliothèque pour afficher des barres de progression
-
-import numpy as np  # Importer la bibliothèque NumPy pour le traitement de données
+from pymongo import MongoClient
+from tqdm import tqdm
+import numpy as np
 
 # Établir une connexion à la base de données MongoDB (localhost par défaut)
 client = MongoClient('localhost')
@@ -70,7 +69,7 @@ class Users():
     def get_test_batch(self, n_batch=100, read_ratio=0.1):
         """
         Cette méthode génère un lot de test pour un utilisateur, composé d'une combinaison d'actualités lues et non lues.
-        
+
         :param n_batch: Le nombre total d'actualités à inclure dans le lot de test.
         :param read_ratio: Le ratio d'actualités lues dans le lot de test (valeur entre 0 et 1).
         

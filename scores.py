@@ -4,8 +4,6 @@ import joblib
 from sklearn.metrics import ndcg_score
 from models import reswhy
 
-dico=joblib.load("C:\\Users\\natha\\CentraleSupelec\\Cours_CS\\3A\\Cours\\Filiere\\Periode_1\\Etude_de_cas\\Twinews-adapted\\twinews\\models\\ranking.pkl")
-
 def nDCG(scores):
     # Computes the nDCG score
     k=100
